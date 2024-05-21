@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tasks</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f4f4f4;
+            color: #333;
+        }
+
+        .container {
+            max-width: 800px;
+            margin: 0 auto;
+            padding: 20px;
+        }
+
+        h2 {
+            color: #007bff;
+        }
+
+        textarea, input[type="text"], input[type="number"] {
+            width: 100%;
+            padding: 10px;
+            margin-bottom: 10px;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+            box-sizing: border-box;
+        }
+
+        button {
+            padding: 10px 20px;
+            background-color: #007bff;
+            color: #fff;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+        }
+
+        button:hover {
+            background-color: #0056b3;
+        }
+
+        p {
+            margin-bottom: 10px;
+        }
+
+        #numberError {
+            font-weight: bold;
+        }
+
+        @media (max-width: 600px) {
+            .container {
+                padding: 10px;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <!-- Task 1 -->
+        <h2>Завдання 1: Підрахування кількості слів у введеному рядку, знайти довжину максимального слова, мінімального слова і середню довжину слів. </h2>
+        <textarea id="inputText" rows="4" cols="50"></textarea><br>
+        <button onclick="countWords()">Count Words</button><br>
+        <p id="wordCount"></p>
+        <p id="maxWordLength"></p>
+        <p id="minWordLength"></p>
+        <p id="averageWordLength"></p>
+
+        <!-- Task 2 -->
+        <h2>Завдання 2: Реалізування за допомогою JavaScript перевірку формату дійсного числа: Якщо ввести у текстове поле. Надрукуйте дійсне число рядок, у якому неможливо впізнати число, то поряд із текстовим полем з'являється текст, який інформує про помилку. 
+        </h2>
+        <input type="text" id="numberInput">
+        <button onclick="checkNumberFormat()">Check Number Format</button>
+        <p id="numberError" style="color: red;"></p>
+
+        <!-- Task 3 -->
+        <h2>Завдання 3: Створення метода у всіх числових об'єктів, який би виводив значення числа від 0 до 99 у вигляді слів</h2>
+        <input type="number" id="numberToConvert">
+        <button onclick="convertNumberToWords()">Convert to Words</button>
+        <p id="numberInWords"></p>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
